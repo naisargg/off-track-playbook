@@ -68,6 +68,8 @@ main { padding: 2.5rem 1.5rem 4rem; }
 
 .badge {
   display: inline-block;
+  align-self: flex-start;
+  width: fit-content;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
