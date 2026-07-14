@@ -47,22 +47,10 @@ a { color: inherit; text-decoration: none; }
   transition: opacity 0.55s ease, visibility 0.55s;
 }
 #loader.done { opacity: 0; visibility: hidden; }
-#loader svg { width: 68px; height: 68px; }
-#loader .mark-ring {
-  stroke-dasharray: 170; stroke-dashoffset: 170;
-  animation: ringdraw 0.7s 0.1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-#loader .mark-blade {
-  opacity: 0; transform: translate(-16px, 16px);
-  transform-box: fill-box;
-  animation: launch 0.35s 0.8s cubic-bezier(0.2, 0.6, 0.2, 1.2) forwards;
-}
 #loader .count {
-  font-family: var(--serif); font-size: 0.95rem; color: var(--ink-soft);
-  font-variant-numeric: tabular-nums; letter-spacing: 0.15em;
+  font-family: var(--serif); font-size: 1.3rem; color: var(--ink-soft);
+  font-variant-numeric: tabular-nums; letter-spacing: 0.2em;
 }
-@keyframes ringdraw { to { stroke-dashoffset: 0; } }
-@keyframes launch { to { opacity: 1; transform: translate(0, 0); } }
 
 /* ---------- particle canvas ---------- */
 #dust { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.5; }
@@ -75,7 +63,6 @@ header.site {
 }
 header.site .wrap, main, footer.site .wrap { max-width: var(--max); margin: 0 auto; position: relative; z-index: 5; }
 header.site .wrap { display: flex; align-items: center; gap: 0.8rem; }
-header.site svg { width: 38px; height: 38px; flex: none; }
 header.site .brand {
   font-family: var(--serif); font-weight: 600; font-size: 1.02rem; letter-spacing: 0.01em;
 }

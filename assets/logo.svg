@@ -1,7 +1,0 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Off-Track Playbook mark: a bold circuit ring broken open, with a red blade launching out of it">
-  <!-- the circuit: the O of Off-Track, broken where the line leaves -->
-  <path class="mark-ring" d="M 67.5 39 A 32 32 0 1 0 83 54.5"
-        fill="none" stroke="#ece9e2" stroke-width="15"/>
-  <!-- the exit: the trajectory, off track at full speed -->
-  <path class="mark-blade" d="M 65.7 45.7 L 92.5 18.9 L 103.1 29.5 L 76.3 56.3 Z" fill="#e10032"/>
-</svg>
