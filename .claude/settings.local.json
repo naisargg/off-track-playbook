@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude-in-chrome__computer",
+      "mcp__claude-in-chrome__find",
+      "mcp__claude-in-chrome__form_input",
+      "Bash(git push *)",
+      "mcp__claude-in-chrome__navigate",
+      "Bash(curl --fail --retry 20 --retry-delay 15 --retry-all-errors -s -o /dev/null -w \"%{http_code}\" https://naisargg.github.io/off-track-playbook/)",
+      "Skill(dataviz)",
+      "Skill(dataviz:*)",
+      "Bash(node /private/tmp/claude-501/bundled-skills/2.1.209/83eb2a044d9911351608299deb68b137/dataviz/scripts/validate_palette.js \"#e10032,#4a463c\" --mode dark --surface \"#0b0a09\")"
+    ]
+  }
+}
