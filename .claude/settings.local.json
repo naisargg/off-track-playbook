@@ -23,7 +23,9 @@
       "Bash(git commit -q -m 'Study 05: Paddock Club redesign + homepage statuses and README *)",
       "Bash(git commit -q -m 'Site-wide navigation: header study nav + prev/next pagers *)",
       "Bash(git commit -q -m 'Tiles: fill empty space with per-study data previews *)",
-      "Bash(git commit -q -m 'Brand accent: red -> giallo Modena; tiles filled with descriptions *)"
+      "Bash(git commit -q -m 'Brand accent: red -> giallo Modena; tiles filled with descriptions *)",
+      "Bash(git commit -q -m 'Tiles: drop forced square aspect, size by content *)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
