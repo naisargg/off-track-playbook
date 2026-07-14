@@ -25,7 +25,7 @@
 <div class="frame-wrap">
 <main class="sect">
 <article class="project">
-  <span class="badge soft reveal in">In progress</span>
+  <span class="badge reveal in">Interactive</span>
   <h1>Net Zero Progress Tracker</h1>
   <p class="lede reveal in">
     From a 2018 baseline of 228,793 tCO₂e, F1 has published a ~35% reduction — while
@@ -35,20 +35,75 @@
     for the remaining gap.
   </p>
 
-  <div class="reveal"><h2>What it will show</h2>
-  <ul>
-    <li>Category-level progress: facilities −64%, logistics −29%, all-European-GP alternative energy in 2025.</li>
-    <li>The growth-versus-reduction tension: cuts must outpace calendar and attendance expansion.</li>
-    <li>Where credibility risk lives: logistics is still 40–50% of the footprint, business travel another 25–30%.</li>
-  </ul></div>
-
-  <div class="note reveal">
-    <strong>Team framing:</strong> ESG strategy sits largely at FOM level — this study
-    frames the team-side levers (factory emissions, travel, European truck legs) that a
-    team like Ferrari or Audi/Sauber directly controls.
+  <div class="reveal"><h2>1 · Where the footprint stands</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="v">228,793 t</div><div class="k">2018 baseline CO₂e — published</div></div>
+    <div class="kpi"><div class="v" id="nz-now">—</div><div class="k">Latest reported level (≈ −34%, modeled from published category cuts)</div></div>
+    <div class="kpi"><div class="v">114,397 t</div><div class="k">2030 ceiling — the −50% absolute-reduction gate</div></div>
+    <div class="kpi"><div class="v"><em id="nz-gap">—</em></div><div class="k">Still to cut before 2030</div></div>
   </div>
 
-  <div class="stub reveal">Scorecard build coming — data shared with the <a href="sea-freight.html">Sea-Freight Transition Simulator</a>.</div>
+  <div class="panel">
+    <div class="panel-head">
+      <h3>Progress by category</h3>
+      <span>Faint track = 2018 share · solid bar = today · est. where noted</span>
+    </div>
+    <div class="mini-bars" id="nz-cats"></div>
+    <p style="font-size:0.82rem; color:var(--ink-faint); font-weight:300; margin:1rem 0 0;">
+      Achieved while the calendar grew from 21 to 24 races and attendance from 4M to
+      6.5M — cuts have outpaced expansion, which is the fact that makes the program
+      credible. Facilities moved first (renewables are the easy purchase); logistics
+      and travel are the long war.</p>
+  </div>
+  </div>
+
+  <div class="reveal"><h2>2 · The road to 2030</h2>
+  <div class="panel">
+    <div class="panel-head">
+      <h3>Scenario: annual reduction rate from here</h3>
+      <span id="nz-rate-label">8% per year</span>
+    </div>
+    <input type="range" id="nz-rate" min="0" max="15" step="0.5" value="8" aria-label="Annual reduction rate percent">
+    <svg id="nz-chart" viewBox="0 0 640 230" role="img" aria-label="Emissions trajectory 2018 to 2030 against the minus fifty percent target">
+      <line x1="60" y1="10" x2="60" y2="195" stroke="#26292d"/>
+      <line x1="60" y1="195" x2="620" y2="195" stroke="#26292d"/>
+      <text x="56" y="18" text-anchor="end" font-size="11" fill="#5a5f66">230k</text>
+      <text x="56" y="110" text-anchor="end" font-size="11" fill="#5a5f66">115k</text>
+      <text x="56" y="195" text-anchor="end" font-size="11" fill="#5a5f66">0</text>
+      <line id="nz-target" x1="60" x2="620" stroke="#43b06c" stroke-dasharray="5 5" stroke-width="1.2"/>
+      <text id="nz-target-t" x="70" text-anchor="start" font-size="11" fill="#43b06c">−50% gate · 114,397 t</text>
+      <polyline id="nz-hist" fill="none" stroke="#9ba0a6" stroke-width="2"/>
+      <polyline id="nz-proj" fill="none" stroke="#e10032" stroke-width="2" stroke-dasharray="6 5"/>
+      <circle id="nz-dot" r="4" fill="#e10032"/>
+      <text id="nz-endlabel" text-anchor="end" font-size="12" fill="#f1f2f3" font-weight="600"></text>
+      <text x="60" y="212" font-size="11" fill="#5a5f66">2018</text>
+      <text x="340" y="212" font-size="11" fill="#5a5f66" text-anchor="middle">2025</text>
+      <text x="620" y="212" font-size="11" fill="#5a5f66" text-anchor="end">2030</text>
+    </svg>
+    <div class="match-out" id="nz-verdict" style="margin-top:0.6rem;"></div>
+  </div>
+  </div>
+
+  <div class="reveal"><h2>3 · What could still derail it</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Risk</th><th>Why it bites</th><th>Watch signal</th></tr>
+      <tr><td><strong>Growth outrunning cuts</strong></td><td>Every added race and attendance record raises the denominator the program must beat</td><td>Per-race emissions intensity, not just the absolute total</td></tr>
+      <tr><td><strong>Scope-3 accounting seams</strong></td><td>Spectator travel sits at promoter level — consistent measurement across 24 promoters is unsolved</td><td>Whether future reports widen or narrow the boundary</td></tr>
+      <tr><td><strong>Offset integrity</strong></td><td>Net Zero's last mile is offsets; standards are tightening yearly</td><td>Share of removals vs. avoidance credits in the 2030 residual</td></tr>
+    </table>
+  </div>
+  </div>
+
+  <div class="note reveal">
+    <strong>Team framing:</strong> ESG strategy sits largely at FOM level — for a team
+    pitch (Ferrari, Audi/Sauber), the levers are factory renewables, travel policy, and
+    the European truck legs. <strong>Sources:</strong> F1 published sustainability
+    reporting (228,793 t baseline; ~35% cut; facilities −64%; logistics −29%); event and
+    travel category changes are <em>modeled estimates</em> reconciled to the published
+    total. Assumptions shared with the <a href="sea-freight.html">Sea-Freight
+    Transition Simulator</a>.
+  </div>
 </article>
 </main>
 <div class="frame-end"></div>
@@ -59,5 +114,79 @@
 </footer>
 
 <script src="../assets/main.js"></script>
+<script>
+(function () {
+  /* published: baseline 228,793 t; facilities −64%; logistics −29%; total ≈ −35%.
+     travel/event changes are modeled estimates reconciled to the published total. */
+  var BASE = 228793;
+  var CATS = [
+    { name: "Logistics", share: 0.45, cut: 0.29, pub: true },
+    { name: "Business travel", share: 0.277, cut: 0.24, pub: false },
+    { name: "Facilities & factories", share: 0.193, cut: 0.64, pub: true },
+    { name: "Event operations", share: 0.08, cut: 0.25, pub: false }
+  ];
+
+  var now = 0;
+  var maxBaseT = BASE * 0.45;
+  var rows = document.getElementById("nz-cats");
+  CATS.forEach(function (c) {
+    var b = BASE * c.share;
+    var t = b * (1 - c.cut);
+    now += t;
+    var row = document.createElement("div");
+    row.className = "mrow";
+    row.innerHTML =
+      '<span class="ml">' + c.name + '</span>' +
+      '<span class="mt" style="background:var(--panel-2); width:' + (b / maxBaseT * 100) + '%;">' +
+        '<i style="--w:' + (t / b * 100) + '%; background:' + (c.pub ? "#9ba0a6" : "#565b61") + ';"></i></span>' +
+      '<span class="mv">−' + Math.round(c.cut * 100) + '%' + (c.pub ? "" : " est") + '</span>';
+    rows.appendChild(row);
+  });
+
+  document.getElementById("nz-now").textContent = "~" + Math.round(now / 1000) + ",000 t";
+  var TARGET = 114397;
+  document.getElementById("nz-gap").textContent = "~" + Math.round((now - TARGET) / 1000) + ",000 t";
+
+  /* projection chart */
+  var X0 = 60, X1 = 620, Y0 = 195, YMAX = 230000, H = 185;
+  function x(year) { return X0 + (year - 2018) / (2030 - 2018) * (X1 - X0); }
+  function y(t) { return Y0 - t / YMAX * H; }
+
+  var tl = document.getElementById("nz-target");
+  tl.setAttribute("y1", y(TARGET)); tl.setAttribute("y2", y(TARGET));
+  document.getElementById("nz-target-t").setAttribute("y", y(TARGET) - 6);
+  document.getElementById("nz-hist").setAttribute("points",
+    x(2018) + "," + y(BASE) + " " + x(2025) + "," + y(now));
+
+  var slider = document.getElementById("nz-rate");
+  function project() {
+    var r = parseFloat(slider.value) / 100;
+    document.getElementById("nz-rate-label").textContent = slider.value + "% per year";
+    var pts = [], t = now;
+    for (var yr = 2025; yr <= 2030; yr++) {
+      pts.push(x(yr) + "," + y(t));
+      t = t * (1 - r);
+    }
+    t = t / (1 - r); /* value at 2030 */
+    document.getElementById("nz-proj").setAttribute("points", pts.join(" "));
+    var dot = document.getElementById("nz-dot");
+    dot.setAttribute("cx", x(2030)); dot.setAttribute("cy", y(t));
+    var lbl = document.getElementById("nz-endlabel");
+    lbl.setAttribute("x", X1 - 8); lbl.setAttribute("y", y(t) - 10);
+    lbl.textContent = Math.round(t / 1000) + "k t in 2030";
+    var verdict = document.getElementById("nz-verdict");
+    if (t <= TARGET) {
+      verdict.innerHTML = "<strong>Clears the −50% gate</strong> with " +
+        Math.round(TARGET - t).toLocaleString() + " t to spare. Residual ~" +
+        Math.round(t).toLocaleString() + " t must still be offset or removed to reach Net Zero — offset quality becomes the story.";
+    } else {
+      verdict.innerHTML = "<strong>Misses the −50% gate</strong> by " +
+        Math.round(t - TARGET).toLocaleString() + " t. At this pace the 2030 claim would lean on offsets for reductions — exactly the credibility risk the program is designed to avoid.";
+    }
+  }
+  slider.addEventListener("input", project);
+  project();
+})();
+</script>
 </body>
 </html>
