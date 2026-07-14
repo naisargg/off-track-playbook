@@ -394,6 +394,14 @@ input[type="range"] { width: 100%; accent-color: var(--red); }
 .itl p:last-child { margin-bottom: 0; }
 .itl strong { color: var(--ink); }
 
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+@media (max-width: 860px) { .cards { grid-template-columns: 1fr; } }
+.cards .panel h3 { font-size: 0.98rem; font-weight: 600; margin: 0 0 0.7rem; }
+.cards .panel h3 small { display: block; font-size: 0.72rem; font-weight: 400; color: var(--red-soft); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.4rem; }
+.cards .panel p { font-size: 0.86rem; color: var(--ink-soft); font-weight: 300; line-height: 1.6; margin: 0 0 0.7rem; }
+.cards .panel p:last-child { margin-bottom: 0; }
+.cards .panel p strong { color: var(--ink); }
+
 .match-out { border: 1px dashed var(--ink-faint); padding: 1.1rem 1.3rem; margin-top: 1rem; font-size: 0.9rem; color: var(--ink-soft); font-weight: 300; min-height: 3.4rem; }
 .match-out strong { color: var(--ink); }
 .field { display: flex; flex-direction: column; gap: 0.35rem; }

@@ -18,7 +18,8 @@
       "Bash(git commit -q -m 'Coverage strip: function labels become clickable pill buttons *)",
       "Bash(git commit -q -m 'Flagship: interactive ROI dashboard + Italian executive summary *)",
       "Bash(git commit -q -m 'Study 02: interactive sea-freight transition simulator *)",
-      "Bash(git commit -q -m 'Study 03: net-zero progress tracker with scenario projection *)"
+      "Bash(git commit -q -m 'Study 03: net-zero progress tracker with scenario projection *)",
+      "Bash(git commit -q -m 'Study 04: merchandise & collab strategy teardown *)"
     ]
   }
 }
