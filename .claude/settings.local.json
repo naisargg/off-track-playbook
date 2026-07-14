@@ -25,7 +25,8 @@
       "Bash(git commit -q -m 'Tiles: fill empty space with per-study data previews *)",
       "Bash(git commit -q -m 'Brand accent: red -> giallo Modena; tiles filled with descriptions *)",
       "Bash(git commit -q -m 'Tiles: drop forced square aspect, size by content *)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(git commit -q -m 'Compress vertical rhythm site-wide *)"
     ]
   }
 }
