@@ -82,10 +82,114 @@
     </table>
   </div></div>
 
-  <div class="stub reveal">
-    <strong>Interactive dashboard — in build.</strong><br>
-    Next: the four layers above as a live dashboard a commercial director could use in a QBR.<br>
-    <em>Sintesi in italiano — in arrivo.</em>
+  <div class="reveal"><h2 id="dashboard">5 · The dashboard</h2>
+  <p>The four layers, assembled the way they would land in a quarterly business review.
+  Every figure is public or a labeled estimate — the point is the <strong>instrument</strong>,
+  not confidential numbers.</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">~$100M</div><div class="k">Annual deal value — trade-press estimate</div></div>
+    <div class="kpi"><div class="v" id="kpi-rate">—</div><div class="k">Activation completion rate, contracted right categories with a public trace</div></div>
+    <div class="kpi"><div class="v" id="kpi-live">—</div><div class="k">Right categories fully activated</div></div>
+    <div class="kpi"><div class="v"><em id="kpi-gaps">—</em></div><div class="k">Gaps flagged for the commercial team</div></div>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Dashboard layers">
+    <button role="tab" aria-selected="true" data-tab="t1">1 · Exposure</button>
+    <button role="tab" aria-selected="false" data-tab="t2">2 · Attribution</button>
+    <button role="tab" aria-selected="false" data-tab="t3">3 · Execution</button>
+    <button role="tab" aria-selected="false" data-tab="t4">4 · Business impact</button>
+  </div>
+
+  <div class="tabpanel panel" id="t1" role="tabpanel">
+    <div class="panel-head">
+      <h3>What one driver post is worth to each sponsor</h3>
+      <span>Media value of a single Hamilton announcement post · Relo Metrics, Jan 2025</span>
+    </div>
+    <div class="mini-bars">
+      <div class="mrow hot"><span class="ml">HP (title)</span><span class="mt"><i style="--w:100%"></i></span><span class="mv">$62.1k</span></div>
+      <div class="mrow"><span class="ml">Ferrari (own brand)</span><span class="mt"><i style="--w:80.5%"></i></span><span class="mv">$50.0k</span></div>
+      <div class="mrow"><span class="ml">Shell</span><span class="mt"><i style="--w:66%"></i></span><span class="mv">$40k+</span></div>
+      <div class="mrow"><span class="ml">IBM</span><span class="mt"><i style="--w:66%"></i></span><span class="mv">$40k+</span></div>
+      <div class="mrow"><span class="ml">Puma</span><span class="mt"><i style="--w:66%"></i></span><span class="mv">$40k+</span></div>
+    </div>
+    <p style="font-size:0.82rem; color:var(--ink-faint); font-weight:300; margin:1rem 0 0;">
+      Context: grid-wide sponsor media value reached $665M in H1 2025 (Relo Metrics).
+      Exposure is the layer the industry already measures well — which is exactly why a
+      ~$100M deal can't be defended on this layer alone.</p>
+  </div>
+
+  <div class="tabpanel panel" id="t2" role="tabpanel" hidden>
+    <div class="panel-head">
+      <h3>Which assets can actually be attributed</h3>
+      <span>Attribution quality per asset class · audit assessment</span>
+    </div>
+    <div class="table-wrap" style="border:0; margin:0;">
+      <table>
+        <tr><th>Asset</th><th>Public value signal</th><th>Attribution</th></tr>
+        <tr><td><strong>Team naming rights</strong></td><td>"Scuderia Ferrari HP" in every broadcast mention, result graphic, and headline</td><td>Direct — logo/name detection</td></tr>
+        <tr><td><strong>Co-designed special livery</strong> (Miami 2025)</td><td>Global coverage of the first asymmetric livery in Scuderia history</td><td>Direct — campaign-window lift</td></tr>
+        <tr><td>Driver social content</td><td>$62.1k/post to HP measured by Relo Metrics</td><td>Direct — per-post value</td></tr>
+        <tr><td>F1 Academy (Weug) + esports team</td><td>Race wins and a title defense in HP colours; young/female audience reach</td><td>Proxy — audience composition</td></tr>
+        <tr><td>HP.com team storefronts</td><td>"Scuderia Ferrari HP" SKU sections in multiple regions</td><td>Direct — revenue attribution possible, not published</td></tr>
+        <tr><td>Enterprise tech deployment (Z, Poly, printing)</td><td>Partnership-page mentions; livery parts printed on HP hardware</td><td>Weak — needs case-study content</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="tabpanel panel" id="t3" role="tabpanel" hidden>
+    <div class="panel-head">
+      <h3>Activation completion — contracted rights vs. public record</h3>
+      <span>Click a right to see the evidence · May 2024 → Jul 2026</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.1rem;">
+      <div class="gauge" style="flex:1"><i id="gauge-fill"></i></div>
+      <span id="gauge-label" style="font-size:0.86rem; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap;">—</span>
+    </div>
+    <div class="check" id="rights"></div>
+  </div>
+
+  <div class="tabpanel panel" id="t4" role="tabpanel" hidden>
+    <div class="panel-head">
+      <h3>B2B pipeline proxies — where the board conversation should live</h3>
+      <span>The layer nobody publishes, made measurable</span>
+    </div>
+    <div class="table-wrap" style="border:0; margin:0;">
+      <table>
+        <tr><th>Proxy</th><th>Status</th><th>What to measure</th></tr>
+        <tr><td><strong>Ferrari-badged product line</strong></td><td>Live — 2026 co-engineered PCs announced</td><td>Unit revenue vs. comparable non-badged SKUs</td></tr>
+        <tr><td><strong>Team storefronts on HP.com</strong></td><td>Live — multiple regions</td><td>Traffic and conversion sourced from race weekends</td></tr>
+        <tr><td><strong>Partner-conference presence</strong> (HP Amplify)</td><td><em>No public trace</em></td><td>Ferrari-hosted sessions, meetings booked, pipeline opened</td></tr>
+        <tr><td><strong>Paddock B2B hosting</strong></td><td>Not publicly visible (normal)</td><td>Meetings per race × close rate × average enterprise deal</td></tr>
+        <tr><td><strong>Proof-of-value content</strong></td><td><em>Thin</em> — IBM out-publishes the title sponsor</td><td>Enterprise case studies shipped per season</td></tr>
+      </table>
+    </div>
+    <p style="font-size:0.82rem; color:var(--ink-faint); font-weight:300; margin:1rem 0 0;">
+      If layer 4 stays empty, the deal renews on brand sentiment alone. Filling it is the
+      cheapest insurance a commercial team can buy before renegotiation.</p>
+  </div>
+  </div>
+
+  <div class="reveal"><h2 id="sintesi">6 · Sintesi in italiano</h2>
+  <div class="itl">
+    <h3>Ferrari × HP — sintesi per la direzione commerciale</h3>
+    <p>Da maggio 2024 HP è il title sponsor della Scuderia — il primo dall'era del
+    tabacco — con un accordo pluriennale stimato dalla stampa di settore intorno ai
+    <strong>100 milioni di dollari l'anno</strong>, il secondo della griglia dopo
+    Oracle–Red Bull.</p>
+    <p>L'audit, condotto esclusivamente su fonti pubbliche, censisce le attivazioni in
+    sette categorie: naming, livrea e tuta, la livrea speciale co-disegnata di Miami 2025,
+    F1 Academy ed esports, fornitura tecnologica, co-ingegnerizzazione dei PC 2026 e
+    vetrine dedicate su HP.com. <strong>Due lacune</strong> emergono dal confronto tra
+    diritti contrattuali e tracce pubbliche: nessuna presenza Ferrari ad HP Amplify — la
+    conferenza partner di HP con oltre 2.200 partecipanti — e una narrazione enterprise
+    più debole di quella che IBM, partner minore, pubblica sul proprio lavoro con la
+    Scuderia.</p>
+    <p>La proposta: misurare l'accordo su quattro livelli — esposizione, attribuzione,
+    <strong>tasso di completamento delle attivazioni</strong> e pipeline B2B — invece che
+    sulle sole impression televisive. È il cruscotto presentato qui sopra, pronto per una
+    revisione trimestrale.</p>
+  </div>
   </div>
 
   <div class="note reveal">
@@ -105,5 +209,64 @@
 </footer>
 
 <script src="../assets/main.js"></script>
+<script>
+(function () {
+  /* tabs */
+  var tabs = document.querySelectorAll('.tabs [role="tab"]');
+  tabs.forEach(function (b) {
+    b.addEventListener('click', function () {
+      tabs.forEach(function (o) {
+        o.setAttribute('aria-selected', o === b ? 'true' : 'false');
+        document.getElementById(o.dataset.tab).hidden = o !== b;
+      });
+    });
+  });
+
+  /* contracted rights vs public record — the audit's core data */
+  var rights = [
+    { name: "Team naming rights", s: 1, ev: "Team entered as “Scuderia Ferrari HP” since Miami 2024 — every session, broadcast and press release. (Official)" },
+    { name: "Livery, race suits & team kit", s: 1, ev: "HP mark and electric-blue accents on the SF-24/SF-25, suits and kit from debut onward. (Official)" },
+    { name: "Co-creation rights on the car", s: 1, ev: "Miami GP 2025 special livery co-designed with HP — first asymmetric graphics in Scuderia history, unveiled with both drivers. (HP & Ferrari newsrooms)" },
+    { name: "F1 Academy programme branding", s: 1, ev: "Maya Weug races in Scuderia Ferrari HP colours; race win at Yas Marina, P3 in the 2025 standings. (Ferrari.com, F1 Academy)" },
+    { name: "Esports programme branding", s: 1, ev: "Scuderia Ferrari HP Esports Team in F1 Sim Racing; open-entry “Ferrari HP Esports Series” for fans. (Ferrari.com)" },
+    { name: "Technology supply integration", s: 1, ev: "Z / ZBook workstations, EliteBook AI PCs, Poly collaboration tools deployed; livery parts produced on HP Large Format printers. (HP partnership pages)" },
+    { name: "Product co-engineering", s: 1, ev: "2026 announcement: Ferrari design input into HP consumer PC development — the enterprise-integration clause actually executed. (HP newsroom)" },
+    { name: "B2B / partner-event access", s: 0, ev: "No public trace of Ferrari assets at HP Amplify (2,200+ partners) in 2025 or 2026. Classic signed-but-unexecuted clause — flagged." },
+    { name: "Proof-of-value storytelling", s: 0.5, ev: "Engineering stories exist (livery printing), but no enterprise case study; IBM — a smaller partner — out-publishes the title sponsor. Partial — flagged." }
+  ];
+
+  var wrap = document.getElementById('rights');
+  var score = 0, full = 0, gaps = 0;
+  rights.forEach(function (r) {
+    score += r.s;
+    if (r.s === 1) full++;
+    if (r.s < 1) gaps++;
+    var cls = r.s === 1 ? 'on' : (r.s === 0 ? 'off' : 'half');
+    var st = r.s === 1 ? 'Activated' : (r.s === 0 ? 'No public trace' : 'Partial');
+    var d = document.createElement('details');
+    d.innerHTML = '<summary><span class="dot ' + cls + '"></span>' + r.name +
+      '<span class="st">' + st + '</span></summary><div class="ev">' + r.ev + '</div>';
+    wrap.appendChild(d);
+  });
+
+  var pct = Math.round((score / rights.length) * 100);
+  document.getElementById('kpi-rate').textContent = pct + '%';
+  document.getElementById('kpi-live').textContent = full + ' / ' + rights.length;
+  document.getElementById('kpi-gaps').textContent = gaps;
+  document.getElementById('gauge-label').textContent = pct + '% · ' + score.toFixed(1) + ' of ' + rights.length;
+
+  var fill = document.getElementById('gauge-fill');
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) { fill.style.width = pct + '%'; io.disconnect(); }
+    });
+  }, { threshold: 0.3 });
+  io.observe(fill);
+  /* also fire when the Execution tab is opened while already in view */
+  document.querySelector('[data-tab="t3"]').addEventListener('click', function () {
+    requestAnimationFrame(function () { fill.style.width = pct + '%'; });
+  });
+})();
+</script>
 </body>
 </html>
