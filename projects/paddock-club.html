@@ -25,7 +25,7 @@
 <div class="frame-wrap">
 <main class="sect">
 <article class="project">
-  <span class="badge soft reveal in">In progress</span>
+  <span class="badge reveal in">Concept + demo</span>
   <h1>Paddock Club Exclusivity Redesign</h1>
   <p class="lede reveal in">
     The Paddock Club is a high-margin B2B sales floor, not a catering operation — and
@@ -34,14 +34,82 @@
     framework plus a B2B matchmaking app concept for race weekends.
   </p>
 
-  <div class="reveal"><h2>Deliverables</h2>
-  <ul>
-    <li>A tiering framework: access rights, capacity rules, and what each guest tier is actually there to do.</li>
-    <li>A matchmaking concept — sponsor executives request meetings; the system pairs them by industry fit, turning the commercial director's manual matchmaking into a scalable product.</li>
-    <li>Why this matters commercially: hospitality and ticketing are roughly 10% of F1 revenues, and paddock access is a core sponsorship deliverable.</li>
-  </ul></div>
+  <div class="reveal"><h2>1 · The problem, stated as a product spec</h2>
+  <p>Hospitality and ticketing are roughly 10% of F1's revenues, and paddock access is a
+  core deliverable in nine-figure sponsorship contracts. The recurring complaint from the
+  people actually paying — sponsor executives — is that marquee races have traded the
+  B2B environment for reach: more content guests, fewer closable conversations. The fix
+  is not fewer guests; it is <strong>stratification with teeth</strong> — reach gets
+  content moments, never the sales floor.</p>
+  </div>
 
-  <div class="stub reveal">Framework and app concept in progress — the quick closer of the five studies.</div>
+  <div class="reveal"><h2>2 · The access matrix</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Tier</th><th>Who</th><th>Rights</th><th>Capacity rule</th></tr>
+      <tr><td><strong>T1 · Boardroom</strong></td><td>Title &amp; principal partners' C-suite</td><td>Team Principal one-on-one, pit-wall visit in practice, team-radio device, private dining</td><td>~20 per race, never pooled</td></tr>
+      <tr><td><strong>T2 · Partner executive</strong></td><td>Partner leadership &amp; key accounts</td><td>In-session garage tour, engineer briefing, matchmaking floor access</td><td>~80 per race</td></tr>
+      <tr><td><strong>T3 · Commercial guest</strong></td><td>Partners' clients &amp; prospects</td><td>Pre-session paddock walk, hosted lounge, invited intros</td><td>~150 per race</td></tr>
+      <tr><td><strong>T4 · Reach guest</strong></td><td>Media &amp; creators</td><td>Defined content windows, escorted routes — no B2B floor access</td><td>≤10% of capacity; stricter at marquee races</td></tr>
+    </table>
+  </div>
+  <p>The one rule that changes the room: <strong>reach and access never mix.</strong>
+  Creators get better content moments than they get today (escorted garage windows are
+  more filmable than a crowded lounge) — and the sales floor gets its scarcity back,
+  which is the entire product.</p>
+  </div>
+
+  <div class="reveal"><h2>3 · The matchmaking engine — concept demo</h2>
+  <p>Every race weekend, a team's own sponsor roster is a room full of companies that
+  should be doing business with each other — the commercial director is the human
+  matchmaking layer. This demo shows the product version: executives state an intent,
+  the system proposes pairings and a format from the partner roster.</p>
+  <div class="panel">
+    <div class="fields">
+      <div class="field">
+        <label for="mm-ind">Your industry</label>
+        <select id="mm-ind">
+          <option value="tech">Technology & AI</option>
+          <option value="fin">Financial services</option>
+          <option value="cons">Consumer & retail</option>
+          <option value="ind">Industrial & logistics</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mm-goal">This weekend's objective</label>
+        <select id="mm-goal">
+          <option value="pipeline">Open enterprise pipeline</option>
+          <option value="brand">Co-marketing partnership</option>
+          <option value="ops">Operational supplier search</option>
+        </select>
+      </div>
+    </div>
+    <div class="match-out" id="mm-out"></div>
+    <p style="font-size:0.78rem; color:var(--ink-faint); font-weight:300; margin:0.9rem 0 0;">
+      Concept demo — roster drawn from Ferrari's publicly listed partner ecosystem;
+      pairing logic illustrative. The production version scores industry adjacency,
+      seniority match, and history, then books against the T1/T2 calendar.</p>
+  </div>
+  </div>
+
+  <div class="reveal"><h2>4 · What the commercial team measures</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>KPI</th><th>Why it matters</th></tr>
+      <tr><td><strong>Meetings booked per race</strong></td><td>The matchmaking floor's output — the number renewal decks are built on</td></tr>
+      <tr><td><strong>Intro → opportunity conversion</strong></td><td>Proves the room produces pipeline, not photographs</td></tr>
+      <tr><td><strong>Tier-split guest NPS</strong></td><td>T1/T2 satisfaction is the renewal signal; T4 satisfaction is the content signal — they must be read separately</td></tr>
+      <tr><td><strong>Reach-cap compliance</strong></td><td>The discipline metric: one blown cap at a marquee race undoes a season of scarcity</td></tr>
+    </table>
+  </div>
+  </div>
+
+  <div class="note reveal">
+    <strong>Sources &amp; method:</strong> published hospitality economics (hospitality +
+    ticketing ≈ 10% of F1 revenue), publicly listed Ferrari partner ecosystem, reported
+    sponsor-side commentary on paddock exclusivity. Tier design and matchmaking logic
+    are this study's original proposal.
+  </div>
 </article>
 </main>
 <div class="frame-end"></div>
@@ -52,5 +120,43 @@
 </footer>
 
 <script src="../assets/main.js"></script>
+<script>
+(function () {
+  /* partner roster from Ferrari's publicly listed ecosystem; pairing logic illustrative */
+  var M = {
+    tech: {
+      pipeline: { with: "HP (title partner) and IBM", fmt: "pit-wall session in FP2, then a T1 private-dining follow-up", why: "both run enterprise motions your buyers already sit inside" },
+      brand: { with: "Puma and the esports program", fmt: "co-branded content window in the Saturday garage slot", why: "youth reach plus a proven collab machine" },
+      ops: { with: "Ceva Logistics", fmt: "Friday freight-operations tour with the logistics director", why: "the team itself is the best supplier-evaluation demo on earth" }
+    },
+    fin: {
+      pipeline: { with: "UniCredit and BingX", fmt: "T2 breakfast roundtable before FP1", why: "banking meets digital assets — both hunting the same enterprise treasury buyers" },
+      brand: { with: "UniCredit's events team", fmt: "joint hospitality activation at the Milan/Monza weekend", why: "shared home-market equity with the tifosi" },
+      ops: { with: "IBM", fmt: "engineer briefing on race-data infrastructure", why: "the fan-app case study doubles as a fintech data-platform reference" }
+    },
+    cons: {
+      pipeline: { with: "Puma and the licensing team", fmt: "garage tour, then the trackside retail walkthrough", why: "24 pop-ups across 21 countries is a distribution conversation" },
+      brand: { with: "the F1 Academy program", fmt: "content window with the Academy drivers", why: "the fastest-growing audience segment, with an authentic story" },
+      ops: { with: "Ceva Logistics", fmt: "T2 briefing on the 24-race supply chain", why: "trackside retail logistics is their showcase" }
+    },
+    ind: {
+      pipeline: { with: "Shell and Ceva Logistics", fmt: "T1 dinner on sustainable-fuel operations", why: "energy transition budgets meet freight decarbonization" },
+      brand: { with: "Shell's technical partnership team", fmt: "fuel-lab garage segment", why: "50 years of co-engineering story to borrow from" },
+      ops: { with: "HP's enterprise unit", fmt: "workstation/simulation deployment tour", why: "see the tech supply clauses running in anger" }
+    }
+  };
+  var ind = document.getElementById("mm-ind"),
+      goal = document.getElementById("mm-goal"),
+      out = document.getElementById("mm-out");
+  function match() {
+    var m = M[ind.value][goal.value];
+    out.innerHTML = "Pair with <strong>" + m.with + "</strong> — " + m.fmt +
+      ". <br>Why this pairing: " + m.why + ".";
+  }
+  ind.addEventListener("change", match);
+  goal.addEventListener("change", match);
+  match();
+})();
+</script>
 </body>
 </html>
