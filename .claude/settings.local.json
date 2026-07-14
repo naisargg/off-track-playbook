@@ -27,7 +27,8 @@
       "Bash(git commit -q -m 'Tiles: drop forced square aspect, size by content *)",
       "Bash(python3 -c ' *)",
       "Bash(git commit -q -m 'Compress vertical rhythm site-wide *)",
-      "Bash(git commit -q -m 'Company monogram chips on chart rows *)"
+      "Bash(git commit -q -m 'Company monogram chips on chart rows *)",
+      "Bash(git commit -q -m 'Interactive KPI boxes + per-page references with citations *)"
     ]
   }
 }

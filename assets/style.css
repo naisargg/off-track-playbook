@@ -383,6 +383,40 @@ td em { color: var(--red-soft); font-style: italic; }
 .kpi .v em { font-style: normal; color: var(--red-soft); }
 .kpi .k { font-size: 0.78rem; color: var(--ink-soft); font-weight: 400; margin-top: 0.4rem; line-height: 1.4; }
 
+.kpi[data-go] { position: relative; cursor: pointer; transition: background 0.25s ease; }
+.kpi[data-go]:hover { background: var(--panel-2); }
+.kpi[data-go]::after {
+  content: "→"; position: absolute; top: 0.75rem; right: 0.9rem;
+  font-size: 0.85rem; color: var(--ink-faint);
+  opacity: 0; transform: translateX(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.kpi[data-go]:hover::after { opacity: 1; transform: none; }
+
+.stats a { display: block; border-radius: 8px; transition: background 0.25s ease; padding: 0.4rem 0.6rem; margin: -0.4rem -0.6rem; }
+.stats a:hover { background: var(--panel); }
+.stats a:hover .l { color: var(--ink); }
+
+sup.cite { font-size: 0.62em; line-height: 0; }
+sup.cite a { color: var(--red-soft); font-weight: 500; }
+sup.cite a:hover { text-decoration: underline; }
+
+.refs { list-style: none; margin: 0; padding: 0; counter-reset: ref; }
+.refs li {
+  counter-increment: ref;
+  display: grid; grid-template-columns: 2.2rem 1fr; gap: 0.6rem;
+  padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--line);
+  font-size: 0.86rem; color: var(--ink-soft); font-weight: 300;
+  scroll-margin-top: 5rem;
+}
+.refs li:last-child { border-bottom: 0; }
+.refs li::before { content: counter(ref); color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.refs li:target { background: var(--panel-2); }
+.refs a { color: var(--ink-soft); }
+.refs a:hover { color: var(--red-soft); }
+.refs a::after { content: " ↗"; color: var(--ink-faint); font-size: 0.85em; }
+.refs .unlinked { color: var(--ink-faint); font-size: 0.78em; margin-left: 0.4rem; }
+
 .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.2rem 0 1rem; }
 .tabs button {
   font-family: var(--sans); font-size: 0.84rem; font-weight: 500; color: var(--ink-soft);

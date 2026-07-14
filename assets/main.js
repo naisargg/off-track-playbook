@@ -10,6 +10,25 @@
   }, { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 
+  /* ---- interactive boxes: [data-go] jumps to its evidence, opening tabs on the way ---- */
+  document.addEventListener("click", function (e) {
+    var el = e.target.closest("[data-go]");
+    if (!el) return;
+    var target = document.querySelector(el.getAttribute("data-go"));
+    if (!target) return;
+    var tp = target.classList.contains("tabpanel") ? target : target.closest(".tabpanel");
+    if (tp) {
+      var btn = document.querySelector('.tabs [data-tab="' + tp.id + '"]');
+      if (btn) btn.click();
+    }
+    if (el.hasAttribute("data-gaps")) {
+      document.querySelectorAll("#rights details").forEach(function (d) {
+        if (d.querySelector(".dot.off, .dot.half")) d.open = true;
+      });
+    }
+    target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+  });
+
   /* ---- stat count-up ---- */
   var nio = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
