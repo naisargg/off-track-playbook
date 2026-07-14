@@ -1,0 +1,153 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glossy sculptural Formula 1 car artwork on a dark metal plaque">
+  <defs>
+    <radialGradient id="sp-plaque" cx="0.32" cy="0.2" r="1.15">
+      <stop offset="0" stop-color="#45484f"/>
+      <stop offset="0.45" stop-color="#2b2d31"/>
+      <stop offset="1" stop-color="#17181b"/>
+    </radialGradient>
+    <linearGradient id="sp-paint" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#50000e"/>
+      <stop offset="0.3" stop-color="#e10032"/>
+      <stop offset="0.5" stop-color="#ff5065"/>
+      <stop offset="0.72" stop-color="#a50023"/>
+      <stop offset="1" stop-color="#42000b"/>
+    </linearGradient>
+    <linearGradient id="sp-paint2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6e0016"/>
+      <stop offset="0.45" stop-color="#e81140"/>
+      <stop offset="1" stop-color="#4a000d"/>
+    </linearGradient>
+    <linearGradient id="sp-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.5" stop-color="#b9c0c9"/>
+      <stop offset="1" stop-color="#5d646d"/>
+    </linearGradient>
+    <radialGradient id="sp-tire" cx="0.35" cy="0.3" r="1">
+      <stop offset="0" stop-color="#3d3f44"/>
+      <stop offset="0.6" stop-color="#1b1c20"/>
+      <stop offset="1" stop-color="#0e0f11"/>
+    </radialGradient>
+    <linearGradient id="sp-carbon-sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="0.4" stop-color="#fff" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sp-sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sp-sweep-hot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="sp-carbon" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#1d1e22"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#33353b" stroke-width="2.4"/>
+    </pattern>
+    <filter id="sp-blur2" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2"/></filter>
+    <filter id="sp-blur5" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="sp-blur12" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="sp-lift" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <mask id="sp-body-mask">
+      <path d="M 110 384 C 180 370, 240 328, 298 290 C 330 268, 366 256, 404 254 C 420 252, 434 250, 444 252 C 452 246, 466 242, 478 246 C 510 236, 552 238, 592 250 C 630 260, 664 266, 702 272 L 702 302 C 650 306, 578 302, 512 290 C 470 282, 442 274, 424 272 C 396 268, 360 276, 322 300 C 282 328, 196 376, 112 396 Z" fill="#fff"/>
+      <rect x="702" y="220" width="120" height="140" rx="18" fill="#fff" transform="rotate(-3 762 290)"/>
+    </mask>
+    <clipPath id="sp-plaque-clip"><rect x="46" y="44" width="808" height="472" rx="26"/></clipPath>
+  </defs>
+
+  <style>
+    #sp-float { animation: sp-float 5s ease-in-out infinite alternate; }
+    #sp-glare { animation: sp-glare 7s ease-in-out infinite; }
+    #sp-hot { animation: sp-glare 7s ease-in-out infinite; animation-delay: 0.15s; }
+    .sp-spin { animation: sp-spin 2.6s linear infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes sp-float { from { transform: translateY(0); } to { transform: translateY(-7px); } }
+    @keyframes sp-glare { 0% { transform: translateX(-950px) skewX(-22deg); } 60% { transform: translateX(950px) skewX(-22deg); } 100% { transform: translateX(950px) skewX(-22deg); } }
+    @keyframes sp-spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) {
+      #sp-float, #sp-glare, #sp-hot, .sp-spin { animation: none; }
+    }
+  </style>
+
+  <!-- plaque -->
+  <rect x="46" y="44" width="808" height="472" rx="26" fill="url(#sp-plaque)" stroke="#0b0c0e" stroke-width="2"/>
+  <path d="M 74 47.5 L 826 47.5" stroke="#fff" stroke-opacity="0.1" stroke-width="1.5" filter="url(#sp-blur2)"/>
+
+  <g clip-path="url(#sp-plaque-clip)">
+    <!-- red ambient glow behind the car -->
+    <ellipse cx="440" cy="330" rx="300" ry="120" fill="#e10032" opacity="0.07" filter="url(#sp-blur12)"/>
+
+    <g id="sp-float">
+      <!-- floor shadow -->
+      <ellipse cx="450" cy="474" rx="310" ry="20" fill="#000" opacity="0.5" filter="url(#sp-blur12)"/>
+
+      <g filter="url(#sp-lift)">
+        <!-- ===== rear wing carbon block (behind wheel) ===== -->
+        <g transform="rotate(-3 762 290)">
+          <rect x="702" y="220" width="120" height="140" rx="18" fill="url(#sp-carbon)" stroke="#0c0d0f" stroke-width="2"/>
+          <rect x="702" y="220" width="120" height="140" rx="18" fill="url(#sp-carbon-sheen)"/>
+          <path d="M 720 238 L 802 232" stroke="#fff" stroke-opacity="0.4" stroke-width="3" filter="url(#sp-blur2)"/>
+          <path d="M 726 258 L 798 253 M 728 276 L 796 271 M 730 294 L 794 289" stroke="#0e0f11" stroke-width="6" stroke-linecap="round"/>
+        </g>
+
+        <!-- ===== rear wheel ===== -->
+        <g>
+          <circle cx="640" cy="340" r="76" fill="url(#sp-tire)"/>
+          <circle cx="640" cy="340" r="76" fill="none" stroke="#08090a" stroke-width="3"/>
+          <path d="M 578 296 A 76 76 0 0 1 694 290" stroke="#fff" stroke-opacity="0.3" stroke-width="5" fill="none" filter="url(#sp-blur5)"/>
+          <circle cx="640" cy="340" r="46" fill="none" stroke="#3c3f45" stroke-width="13"/>
+          <g class="sp-spin">
+            <path d="M 640 294 A 46 46 0 0 1 680 318" stroke="#fff" stroke-opacity="0.5" stroke-width="6" fill="none" filter="url(#sp-blur2)"/>
+          </g>
+          <circle cx="640" cy="340" r="32" fill="#101114"/>
+          <circle cx="640" cy="340" r="9" fill="url(#sp-chrome)"/>
+        </g>
+
+        <!-- ===== body: one continuous blade, nose tip to wing block ===== -->
+        <path d="M 110 384 C 180 370, 240 328, 298 290 C 330 268, 366 256, 404 254 C 420 252, 434 250, 444 252 C 452 246, 466 242, 478 246 C 510 236, 552 238, 592 250 C 630 260, 664 266, 702 272 L 702 302 C 650 306, 578 302, 512 290 C 470 282, 442 274, 424 272 C 396 268, 360 276, 322 300 C 282 328, 196 376, 112 396 Z" fill="url(#sp-paint)"/>
+        <path d="M 124 380 C 196 362, 252 322, 304 288 C 350 258, 404 250, 446 250" stroke="#fff" stroke-opacity="0.5" stroke-width="5" fill="none" filter="url(#sp-blur5)"/>
+        <path d="M 480 244 C 520 234, 560 238, 600 252 C 636 262, 668 268, 696 272" stroke="#fff" stroke-opacity="0.6" stroke-width="6" fill="none" filter="url(#sp-blur5)"/>
+        <path d="M 456 268 C 520 262, 580 268, 640 278" stroke="#fff" stroke-opacity="0.14" stroke-width="4" fill="none" filter="url(#sp-blur5)"/>
+
+        <!-- carbon sidepod wedge under the ribbon -->
+        <path d="M 442 292 C 500 302, 556 306, 606 302 C 578 326, 520 332, 482 322 C 460 316, 448 306, 442 292 Z" fill="url(#sp-carbon)"/>
+        <path d="M 442 292 C 500 302, 556 306, 606 302 C 578 326, 520 332, 482 322 C 460 316, 448 306, 442 292 Z" fill="url(#sp-carbon-sheen)"/>
+
+        <!-- ===== front wheel ===== -->
+        <g>
+          <circle cx="300" cy="360" r="72" fill="url(#sp-tire)"/>
+          <circle cx="300" cy="360" r="72" fill="none" stroke="#08090a" stroke-width="3"/>
+          <path d="M 242 319 A 72 72 0 0 1 352 312" stroke="#fff" stroke-opacity="0.3" stroke-width="5" fill="none" filter="url(#sp-blur5)"/>
+          <circle cx="300" cy="360" r="44" fill="none" stroke="url(#sp-paint2)" stroke-width="13"/>
+          <g class="sp-spin">
+            <path d="M 300 316 A 44 44 0 0 1 338 340" stroke="#fff" stroke-opacity="0.55" stroke-width="6" fill="none" filter="url(#sp-blur2)"/>
+          </g>
+          <circle cx="300" cy="360" r="31" fill="#101114"/>
+          <circle cx="300" cy="360" r="9" fill="url(#sp-chrome)"/>
+        </g>
+
+
+        <!-- ===== halo, anchored on the cockpit sill ===== -->
+        <path d="M 428 256 C 442 210, 490 204, 508 244" stroke="url(#sp-chrome)" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <path d="M 434 248 C 448 214, 486 210, 502 238" stroke="#fff" stroke-opacity="0.5" stroke-width="3.5" fill="none" filter="url(#sp-blur2)"/>
+        <path d="M 468 210 L 468 246" stroke="url(#sp-chrome)" stroke-width="7"/>
+
+        <!-- ===== front wing ===== -->
+        <path d="M 96 398 C 150 394, 200 390, 246 384 L 249 398 C 200 406, 150 410, 98 412 Z" fill="url(#sp-paint2)"/>
+        <path d="M 104 398 C 155 393, 200 390, 240 386" stroke="#fff" stroke-opacity="0.4" stroke-width="3" fill="none" filter="url(#sp-blur2)"/>
+        <rect x="82" y="374" width="17" height="46" rx="5" fill="url(#sp-carbon)" stroke="#0c0d0f" stroke-width="1.5"/>
+
+        <!-- hot sheen clipped to bodywork -->
+        <g mask="url(#sp-body-mask)">
+          <rect id="sp-hot" x="-100" y="180" width="200" height="260" fill="url(#sp-sweep-hot)"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- glare sweeping the whole plaque -->
+    <rect id="sp-glare" x="-140" y="30" width="240" height="510" fill="url(#sp-sweep)"/>
+  </g>
+</svg>
