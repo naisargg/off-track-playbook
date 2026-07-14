@@ -14,7 +14,8 @@
       "Bash(python3 -)",
       "Bash(git add *)",
       "Bash(git commit -q -m 'Redesign v2: Cipher Digital-style blueprint system *)",
-      "Bash(git commit -q -m 'Studies index: square clickable tiles instead of text rows *)"
+      "Bash(git commit -q -m 'Studies index: square clickable tiles instead of text rows *)",
+      "Bash(git commit -q -m 'Coverage strip: function labels become clickable pill buttons *)"
     ]
   }
 }

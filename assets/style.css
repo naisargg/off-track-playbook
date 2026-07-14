@@ -118,10 +118,15 @@ nav.crumbs a:hover { color: var(--ink); }
 }
 
 /* ---------- coverage strip ---------- */
-.coverage { display: flex; align-items: center; gap: 2rem; padding-top: 1.4rem; padding-bottom: 1.4rem; flex-wrap: wrap; }
-.coverage .cap { font-size: 0.82rem; color: var(--ink-faint); flex: none; padding-right: 2rem; border-right: 1px solid var(--line); }
-.coverage ul { display: flex; gap: 2rem; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
-.coverage li { font-size: 0.88rem; font-weight: 400; color: var(--ink-soft); white-space: nowrap; }
+.coverage { display: flex; align-items: center; gap: 1.6rem; padding-top: 1.4rem; padding-bottom: 1.4rem; flex-wrap: wrap; }
+.coverage .cap { font-size: 0.82rem; color: var(--ink-faint); flex: none; padding-right: 1.6rem; border-right: 1px solid var(--line); }
+.cov-links { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.cov-links a {
+  font-size: 0.85rem; font-weight: 400; color: var(--ink-soft); white-space: nowrap;
+  padding: 0.5rem 1rem; border: 1px solid var(--line); border-radius: 999px;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.cov-links a:hover { color: var(--ink); border-color: var(--ink-faint); background: var(--panel-2); }
 
 /* ---------- statement ---------- */
 .statement h2 {
