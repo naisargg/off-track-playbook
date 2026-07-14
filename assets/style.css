@@ -194,7 +194,17 @@ header.site .wrap { flex-wrap: wrap; }
   align-items: center; gap: 1.1rem;
   padding: 0.44rem 0;
 }
-.crow .who { font-size: 0.86rem; font-weight: 300; color: var(--ink-soft); text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.crow .who { font-size: 0.86rem; font-weight: 300; color: var(--ink-soft); text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; justify-content: flex-end; gap: 0.55rem; }
+
+.chip {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%; flex: none;
+  background: var(--panel-2); border: 1px solid var(--line);
+  font-size: 0.56rem; font-weight: 600; letter-spacing: 0.04em;
+  color: var(--ink-soft); font-variant-numeric: normal;
+}
+.crow.hot .chip, .mrow.hot .chip { border-color: var(--red); color: var(--red-soft); }
+.mini-bars .mrow .ml { display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem; }
 .crow .track { height: 18px; }
 .crow .track i {
   display: block; height: 100%; width: 0;
