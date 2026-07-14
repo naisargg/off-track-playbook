@@ -5,71 +5,122 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Off-Track Playbook — Five Studies in F1 Business Operations</title>
 <meta name="description" content="A capstone portfolio on how a Formula 1 team makes money off-track: sponsorship ROI, logistics, licensing, hospitality, and sustainability.">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
+<div id="loader" aria-hidden="true">
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 45.5 33.9 A 16 16 0 1 1 38 24.1" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+    <path class="logo-line" d="M 18 44 C 24 53, 38 52, 43 42 C 46 36, 45 30, 56 12" stroke="#e10032" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="18" cy="44" r="2.4" fill="#e10032"/>
+    <rect x="53.5" y="7" width="5" height="5" fill="#e10032"/>
+  </svg>
+  <div class="count">000</div>
+</div>
+
+<div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<canvas id="dust" aria-hidden="true"></canvas>
+
 <header class="site">
   <div class="wrap">
-    <div class="brand">The <span>Off-Track</span> Playbook</div>
-    <nav class="crumbs">Five studies in Formula 1 business operations</nav>
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 45.5 33.9 A 16 16 0 1 1 38 24.1" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M 18 44 C 24 53, 38 52, 43 42 C 46 36, 45 30, 56 12" stroke="#e10032" stroke-width="2.6" stroke-linecap="round"/>
+      <circle cx="18" cy="44" r="2.4" fill="#e10032"/>
+      <rect x="53.5" y="7" width="5" height="5" fill="#e10032"/>
+    </svg>
+    <div class="brand">The Off-Track Playbook
+      <small>Five studies in Formula 1 business operations</small>
+    </div>
   </div>
 </header>
 
 <main>
   <section class="hero">
-    <h1>How does an F1 team<br>make money <em>off-track</em>?</h1>
-    <p class="lede">
+    <div class="kicker reveal in">A capstone portfolio · public data only</div>
+    <h1><span class="split">How does an F1 team make money</span> <em class="split">off-track?</em></h1>
+    <p class="lede reveal">
       A Formula 1 team is a nine-figure commercial business wrapped around a racing
-      operation. This portfolio takes five of its revenue and operations functions apart —
-      using public data only — and rebuilds each one as a working analysis a
-      commercial director could actually use.
+      operation. This portfolio takes five of its revenue and operations functions
+      apart — and rebuilds each one as a working analysis a commercial director
+      could actually use.
     </p>
   </section>
 
-  <section class="grid">
-    <a class="card flagship" href="projects/sponsorship-roi.html">
-      <span class="badge">Flagship</span>
-      <h2>Sponsorship Activation Audit &amp; ROI Dashboard — Ferrari × HP</h2>
+  <section class="stats reveal" aria-label="The numbers behind the sport's off-track business">
+    <div><div class="n" data-n="3" data-pre="$" data-suf="B"><sup>+</sup></div><div class="l">F1 sponsorship market, 2026</div></div>
+    <div><div class="n" data-n="100" data-pre="$" data-suf="M">&nbsp;</div><div class="l">Ferrari × HP title deal / yr — est.</div></div>
+    <div><div class="n" data-n="24">&nbsp;</div><div class="l">Races across 21 countries</div></div>
+    <div><div class="n" data-n="35" data-suf="%">&nbsp;</div><div class="l">Carbon cut vs. 2018 baseline</div></div>
+  </section>
+
+  <div class="index-head reveal">
+    <h2>The five studies</h2>
+    <span>Index / 01–05</span>
+  </div>
+
+  <a class="study reveal" href="projects/sponsorship-roi.html">
+    <span class="no">01</span>
+    <span>
+      <h3>Sponsorship Activation Audit &amp; ROI Dashboard — Ferrari × HP</h3>
       <p>An audit of HP's ~$100M/yr title partnership with Scuderia Ferrari: what has
       actually been activated since May 2024, what hasn't, and a measurement framework
-      that goes beyond TV logo impressions.</p>
-      <span class="meta">Commercial Partnerships · Activation inventory live · Dashboard in progress</span>
-    </a>
+      beyond TV logo impressions.</p>
+      <div class="tag"><b>Flagship</b> · Commercial Partnerships · inventory live</div>
+    </span>
+    <span class="arrow">→</span>
+  </a>
 
-    <a class="card" href="projects/sea-freight.html">
-      <span class="badge soft">In progress</span>
+  <a class="study reveal" href="projects/sea-freight.html">
+    <span class="no">02</span>
+    <span>
       <h3>Sea-Freight Transition Simulator</h3>
-      <p>Interactive 2026 calendar map — toggle each flyaway race between air, sea, and
-      regional-hub freight and watch CO₂, cost, and lead-time trade-offs move.</p>
-      <span class="meta">Logistics &amp; Supply Chain</span>
-    </a>
+      <p>The 2026 calendar as an interactive map — toggle each flyaway race between air,
+      sea, and regional-hub freight and watch CO₂, cost, and lead-time trade-offs move.</p>
+      <div class="tag">Logistics &amp; Supply Chain · in progress</div>
+    </span>
+    <span class="arrow">→</span>
+  </a>
 
-    <a class="card" href="projects/net-zero.html">
-      <span class="badge soft">In progress</span>
+  <a class="study reveal" href="projects/net-zero.html">
+    <span class="no">03</span>
+    <span>
       <h3>Net Zero Progress Tracker</h3>
-      <p>Visual scorecard of F1's published emissions from the 2018 baseline to the
-      ~35% reduction achieved, projected against the 2030 target.</p>
-      <span class="meta">ESG &amp; Sustainability</span>
-    </a>
+      <p>F1's published emissions from the 2018 baseline to the ~35% reduction achieved,
+      projected against the 2030 target — with a scenario slider for the remaining gap.</p>
+      <div class="tag">ESG &amp; Sustainability · in progress</div>
+    </span>
+    <span class="arrow">→</span>
+  </a>
 
-    <a class="card" href="projects/merch-collabs.html">
-      <span class="badge soft">In progress</span>
+  <a class="study reveal" href="projects/merch-collabs.html">
+    <span class="no">04</span>
+    <span>
       <h3>Merchandise &amp; Collab Strategy Teardown</h3>
       <p>Ferrari's licensing empire versus the grid's collab strategies — with three
       concrete proposals aimed at F1's new young, female-skewing fanbase.</p>
-      <span class="meta">Licensing &amp; Merchandise</span>
-    </a>
+      <div class="tag">Licensing &amp; Merchandise · in progress</div>
+    </span>
+    <span class="arrow">→</span>
+  </a>
 
-    <a class="card" href="projects/paddock-club.html">
-      <span class="badge soft">In progress</span>
+  <a class="study reveal" href="projects/paddock-club.html">
+    <span class="no">05</span>
+    <span>
       <h3>Paddock Club Exclusivity Redesign</h3>
-      <p>A guest-stratification framework plus a B2B matchmaking app concept that turns
-      the "influencer overcrowding" complaint into a product.</p>
-      <span class="meta">Trackside Hospitality</span>
-    </a>
-  </section>
+      <p>A guest-stratification framework plus a B2B matchmaking concept that turns the
+      "influencer overcrowding" complaint into a product.</p>
+      <div class="tag">Trackside Hospitality · in progress</div>
+    </span>
+    <span class="arrow">→</span>
+  </a>
 
-  <div class="note">
+  <div class="note reveal">
     <strong>Method note:</strong> everything here is built from publicly available
     information — press releases, company channels, trade press, and published
     sustainability reports. All financial figures are third-party estimates unless a
@@ -83,5 +134,7 @@
     built in the open — <a href="research/hp-ferrari-activation-inventory.md">research notes</a>
   </div>
 </footer>
+
+<script src="assets/main.js"></script>
 </body>
 </html>
