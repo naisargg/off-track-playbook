@@ -35,7 +35,8 @@
       "WebFetch(domain:rtrsports.com)",
       "WebSearch",
       "Bash(git commit -q -m 'Study 06: Grid Sponsorship Atlas — every team'\\\\''s sponsors compared *)",
-      "Bash(git commit -q -m 'Atlas matrix: company names + title fees; site-wide text de-crowding *)"
+      "Bash(git commit -q -m 'Atlas matrix: company names + title fees; site-wide text de-crowding *)",
+      "Bash(git commit -q -m 'Study 07: Know RACE — Ferrari as a company, not a team *)"
     ]
   }
 }
