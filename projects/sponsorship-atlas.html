@@ -28,10 +28,9 @@
   <span class="badge reveal in">Interactive</span>
   <h1>Grid Sponsorship Atlas — who pays whom, and why</h1>
   <p class="lede reveal in">
-    Eleven teams, eleven completely different answers to the same question. This atlas
-    compares every portfolio on the grid: when each title partnership started and how,
-    what every roster has in common, and the three forces — geography, state energy
-    money, and personal ties — that explain most of what a logo is doing on a car.
+    Eleven teams, eleven different answers to the same question. When each title deal
+    started, what every roster shares, and the three forces — geography, state money,
+    personal ties — behind the logos.
   </p>
 
   <div class="kpis reveal">
@@ -42,11 +41,9 @@
   </div>
 
   <div class="reveal"><h2 id="timeline">1 · Who signed when — title-partner tenure</h2>
-  <p>Two waves built today's grid. The 2022 wave (Oracle, BWT, Aramco) arrived with the
-  cost cap and the post-Netflix audience boom; the 2024–26 wave (HP, Visa Cash App,
-  Atlassian, Mastercard, Revolut, Toyota) is fintech and enterprise tech buying in at
-  record prices<sup class="cite"><a href="#ref-1">[1]</a></sup>. One deal predates it
-  all: Petronas has been on the Mercedes entry since the team's 2010 return.</p>
+  <p>Two waves built today's grid: 2022 (Oracle, BWT, Aramco) with the cost cap and the
+  Netflix boom, then 2024–26 — fintech and enterprise tech at record prices<sup class="cite"><a href="#ref-1">[1]</a></sup>.
+  Only Petronas predates both.</p>
 
   <div class="panel">
     <div class="panel-head"><h3>Current title partnerships by start year</h3><span>Bar = tenure to 2026 · values are reported estimates</span></div>
@@ -61,11 +58,9 @@
   </div>
 
   <div class="reveal"><h2 id="matrix">2 · What every portfolio contains — the convergence</h2>
-  <p>The similarities are structural. Nearly every roster now carries the same five
-  building blocks — an energy or fuel partner, a payments/fintech name, an enterprise
-  tech or cloud deal, a crypto-era survivor, and an apparel partner from the ~$140M
-  Puma/Adidas wave<sup class="cite"><a href="#ref-6">[6]</a></sup>. The differences
-  live in the last column: who stands behind the team itself.</p>
+  <p>Nearly every roster carries the same five blocks — energy, payments, tech, a
+  crypto-era survivor, apparel<sup class="cite"><a href="#ref-6">[6]</a></sup>. The
+  differences live in the last column: who stands behind the team.</p>
 
   <div class="matrix-wrap">
     <table class="matrix" id="mx">
@@ -73,8 +68,7 @@
     </table>
   </div>
   <p style="font-size:0.8rem; color:var(--ink-faint); font-weight:300; margin-top:0.8rem;">
-    Giallo dot = the anchor that defines that team's strategy. Based on publicly listed
-    partner rosters, 2026 season<sup class="cite"><a href="#ref-1">[1]</a> <a href="#ref-7">[7]</a></sup>.</p>
+    Giallo = the anchor that defines that team's strategy · title partner and estimated fee under each team name. Publicly listed rosters, 2026 season<sup class="cite"><a href="#ref-1">[1]</a> <a href="#ref-7">[7]</a></sup>.</p>
   </div>
 
   <div class="reveal"><h2 id="teams">3 · Team by team — pick one</h2>
@@ -124,15 +118,12 @@
   </div>
   </div>
 
-  <div class="note reveal">
-    <strong>Method:</strong> built from publicly listed partner rosters and trade-press
+  <details class="fold reveal"><summary>Method &amp; sourcing</summary><div class="fold-body"><strong>Method:</strong> built from publicly listed partner rosters and trade-press
     reporting for the 2026 season. Deal values are third-party estimates; equity and
     contract details are reported, not confirmed. Deep-dive on the grid's second-biggest
-    deal: <a href="sponsorship-roi.html">Study 01 — the Ferrari × HP audit</a>.
-  </div>
+    deal: <a href="sponsorship-roi.html">Study 01 — the Ferrari × HP audit</a>.</div></details>
 
-<div class="reveal"><h2 id="refs">References</h2>
-<ol class="refs">
+<details class="fold reveal" id="refs"><summary>References &amp; citations</summary><div class="fold-body"><ol class="refs">
   <li id="ref-1"><span><a href="https://rtrsports.com/en/blog/every-teams-title-sponsor-for-the-2026-formula-1-season/" target="_blank" rel="noopener">RTR Sports — Every F1 team's title sponsor for 2026: values, industries, deal details</a></span></li>
   <li id="ref-2"><span><a href="https://www.santander.com/en/press-room/press-releases/2024/12/santander-to-sponsor-williams-racing-complementing-its-existing-partnership-with-formula-1" target="_blank" rel="noopener">Santander press release — sponsoring Williams Racing from 2025</a></span></li>
   <li id="ref-3"><span><a href="https://www.autosport.com/f1/news/williams-already-banking-on-sainz-success-as-santander-sponsorship-announced/10681117/" target="_blank" rel="noopener">Autosport — Williams banking on Sainz as Santander sponsorship announced</a></span></li>
@@ -141,7 +132,7 @@
   <li id="ref-6"><span><a href="https://rtrsports.com/en/blog/cost-formula-1-sponsorships/" target="_blank" rel="noopener">RTR Sports — F1 sponsorship market costs and category growth (incl. apparel wave)</a></span></li>
   <li id="ref-7"><span><a href="https://www.pitdebrief.com/post/f1-2026-list-of-partners-sponsors-for-each-of-11-teams/" target="_blank" rel="noopener">PitDebrief — 2026 partner list for each of the 11 teams</a></span></li>
   <li id="ref-8"><span>Portfolio sizes (McLaren 54, Cadillac 9, grid typical 20–30) <span class="unlinked">Ampere Analysis via trade reporting</span></span></li>
-</ol></div>
+</ol></div></details>
 
 </article>
 </main>
@@ -164,67 +155,67 @@
 (function () {
   /* the grid, 2026 season — public rosters + trade-press estimates */
   var TEAMS = [
-    { id: "ferrari", name: "Ferrari", title: "HP", since: 2024, est: "~$100M/yr",
+    { id: "ferrari", names: ["Shell", "UniCredit", "HP · IBM", null, "Puma", null], name: "Ferrari", title: "HP", since: 2024, est: "~$100M/yr",
       model: "Blue-chip stack on the sport's biggest brand",
       why: "HP bought the first Ferrari title since the tobacco era to relaunch its brand around AI-era hardware — and got naming, livery, F1 Academy, esports and co-engineered PCs. The rest of the roster mixes seven decades of Shell, Italian money (UniCredit arrived as Santander left with Sainz), IBM's data story and the Puma/Ray-Ban lifestyle layer.",
       anchors: "HP · Shell · UniCredit · IBM · Puma · Ceva",
       ties: ["Italian home market", "Shell heritage (1950s→)", "Audited in Study 01"],
       cats: [1, 0, 1, 0, 1, 0], hotCat: 2 },
-    { id: "redbull", name: "Red Bull", title: "Oracle", since: 2022, est: "~$110M/yr",
+    { id: "redbull", names: [null, null, "Oracle", "Bybit", null, "Red Bull GmbH"], name: "Red Bull", title: "Oracle", since: 2022, est: "~$110M/yr",
       model: "Owner-as-brand, plus the grid's biggest tech check",
       why: "The team is the drinks company's own marketing engine, so the title deal is pure upside: Oracle pays the grid's largest fee and wraps its cloud story around simulation and strategy. Ford arrives on the 2026 power unit as a technical partner, not a sponsor.",
       anchors: "Oracle · Bybit · Ford (technical, 2026)",
       ties: ["Owner-brand economics", "US enterprise tech", "Crypto-era survivor (Bybit)"],
       cats: [0, 0, 1, 1, 0, 1], hotCat: 5 },
-    { id: "mercedes", name: "Mercedes", title: "Petronas", since: 2010, est: "~$80M/yr",
+    { id: "mercedes", names: ["Petronas", "UBS", "SAP", null, "Adidas", "INEOS ⅓ owner"], name: "Mercedes", title: "Petronas", since: 2010, est: "~$80M/yr",
       model: "The technical-partnership gold standard",
       why: "Petronas has fueled the team since its 2010 return — 16 years of fuel and lubricant co-development, the longest active title deal in F1. INEOS went further than any sponsor: it bought a third of the team. The German stack (SAP, Adidas) covers the home market.",
       anchors: "Petronas · INEOS · SAP · Adidas · UBS",
       ties: ["Malaysian state energy", "Sponsor→owner (INEOS)", "German home stack"],
       cats: [1, 0, 1, 0, 1, 1], hotCat: 0 },
-    { id: "mclaren", name: "McLaren", title: "Mastercard", since: 2026, est: "~$90–100M/yr",
+    { id: "mclaren", names: [null, "Mastercard", "Google · Dell", "OKX", null, null], name: "McLaren", title: "Mastercard", since: 2026, est: "~$90–100M/yr",
       model: "The 54-partner consumer machine",
       why: "The broadest portfolio in F1 — Mastercard escalated from premium partner to title, Google paints Android and Chrome on the wheel covers, OKX carried the crypto wave. McLaren sells reach and content velocity, not technical integration.",
       anchors: "Mastercard · Google · OKX · Dell · Hilton",
       ties: ["Consumer-brand breadth", "Largest fintech title in F1", "54 partners — grid record"],
       cats: [0, 1, 1, 1, 1, 0], hotCat: 1 },
-    { id: "astonmartin", name: "Aston Martin", title: "Aramco", since: 2022, est: "~$75M/yr",
+    { id: "astonmartin", names: ["Aramco", null, "Cognizant · NetApp", null, null, "Stroll · Aramco eq."], name: "Aston Martin", title: "Aramco", since: 2022, est: "~$75M/yr",
       model: "State energy money meets a family project",
       why: "Aramco's title deal reportedly includes a ~10% equity option — state-linked energy capital converting into ownership. The team itself is Lawrence Stroll's build, around his brand portfolio and his son; Honda arrives as works engine partner in 2026.",
       anchors: "Aramco · Valvoline · Cognizant · NetApp",
       ties: ["Saudi state energy", "Stroll family ownership", "Reported equity option"],
       cats: [1, 0, 1, 0, 0, 1], hotCat: 5 },
-    { id: "alpine", name: "Alpine", title: "BWT", since: 2022, est: "undisclosed",
+    { id: "alpine", names: ["BWT (water)", null, null, "Binance (era)", null, "Otro Capital"], name: "Alpine", title: "BWT", since: 2022, est: "undisclosed",
       model: "A livery trade and celebrity capital",
       why: "BWT's pink is the most visible water-technology campaign on earth — a livery-first deal. The more interesting money is in the cap table: the 2023 Otro Capital round brought celebrity investors, capital that behaves like sponsorship. The French identity remains strangely under-monetized.",
       anchors: "BWT · Otro Capital investors (equity)",
       ties: ["Austrian water tech", "Celebrity investor capital", "Under-used French identity"],
       cats: [0, 0, 0, 1, 0, 0], hotCat: 5 },
-    { id: "williams", name: "Williams", title: "Atlassian", since: 2025, est: "~$25–35M/yr",
+    { id: "williams", names: ["Gulf", "Santander", "Atlassian", "Kraken", null, null], name: "Williams", title: "Atlassian", since: 2025, est: "~$25–35M/yr",
       model: "Heritage as the product",
       why: "The clearest sponsors-follow-people story on the grid: Santander left Ferrari and came with Sainz. Komatsu returned after backing the team in the Senna era; Gulf brought heritage oil branding fans actually vote on. Atlassian — software with no home race — bought the legacy itself.",
       anchors: "Atlassian · Santander · Komatsu · Gulf · Duracell · Kraken",
       ties: ["Santander followed Sainz", "Komatsu heritage revival", "British legacy brand"],
       cats: [1, 1, 1, 1, 0, 0], hotCat: 1 },
-    { id: "haas", name: "Haas", title: "Toyota Gazoo Racing", since: 2026, est: "undisclosed",
+    { id: "haas", names: [null, "MoneyGram '23–25", null, null, null, "Haas Auto. · Toyota"], name: "Haas", title: "Toyota Gazoo Racing", since: 2026, est: "undisclosed",
       model: "From owner's checkbook to OEM alliance",
       why: "For years the model was Gene Haas sponsoring himself — Haas Automation on a car funded to sell machine tools — with MoneyGram's US payments money on top from 2023. The 2026 TGR title flips it: Toyota returns to F1 through Haas, trading sponsorship cash for a technical partnership.",
       anchors: "Toyota Gazoo Racing · Haas Automation · (MoneyGram 2023–25)",
       ties: ["Owner self-sponsorship", "Toyota's F1 return", "US payments era"],
       cats: [0, 1, 0, 0, 0, 1], hotCat: 5 },
-    { id: "racingbulls", name: "Racing Bulls", title: "Visa + Cash App", since: 2024, est: "undisclosed",
+    { id: "racingbulls", names: [null, "Visa · Cash App", null, null, "Hugo Boss", "Red Bull family"], name: "Racing Bulls", title: "Visa + Cash App", since: 2024, est: "undisclosed",
       model: "Two payment brands, one junior team",
       why: "Visa and Cash App bought the naming of Red Bull's sister team outright — a value route into F1's audience: established-brand reach for Visa, youth positioning for Cash App, at a fraction of senior-team title pricing.",
       anchors: "Visa · Cash App · Hugo Boss",
       ties: ["US payments duo", "Sister-team economics", "Youth-skewed positioning"],
       cats: [0, 1, 0, 0, 1, 1], hotCat: 1 },
-    { id: "audi", name: "Audi", title: "Revolut", since: 2026, est: "~$75M/yr",
+    { id: "audi", names: ["bp", "Revolut", null, "Stake '23–25", null, "Audi AG"], name: "Audi", title: "Revolut", since: 2026, est: "~$75M/yr",
       model: "A works reset with fintech reach",
       why: "The Sauber era ended with Stake — a casino title that had to rename itself in ad-ban markets, F1's live regulatory case study. Audi's works entry resets the board: Revolut pays senior-team money to put a digital bank in front of the sport's youngest audience, with bp as technical partner.",
       anchors: "Revolut · bp (technical) · Adidas",
       ties: ["German OEM entry", "Fintech-native audience", "Post-Stake regulatory reset"],
       cats: [1, 1, 0, 1, 1, 1], hotCat: 1 },
-    { id: "cadillac", name: "Cadillac", title: "— none by design", since: 2026, est: "—",
+    { id: "cadillac", names: [null, null, null, null, "Tommy Hilfiger", "GM · TWG"], name: "Cadillac", title: "— none by design", since: 2026, est: "—",
       model: "Scarcity as a debut strategy",
       why: "Nine partners, no title sponsor, a deliberately clean car: Cadillac is pricing its debut on scarcity, with GM and TWG capital underneath and Tommy Hilfiger leading an American lifestyle roster. The bet: sell the title slot after the audience sees the car, not before.",
       anchors: "Tommy Hilfiger · GM ecosystem · 9 partners total",
@@ -248,16 +239,17 @@
       tl.appendChild(row);
     });
 
-  /* matrix */
+  /* matrix — company names in cells, title fee under each team */
   var mx = document.getElementById("mx");
   TEAMS.forEach(function (t) {
     var tr = document.createElement("tr");
     tr.dataset.team = t.id;
-    var cells = t.cats.map(function (c, i) {
-      if (!c) return "<td></td>";
-      return '<td><span class="mdot' + (i === t.hotCat ? " hot" : "") + '"></span></td>';
+    var cells = t.names.map(function (n, i) {
+      if (!n) return '<td><span class="none">—</span></td>';
+      return '<td><span class="mc' + (i === t.hotCat ? " hot" : "") + '">' + n + "</span></td>";
     }).join("");
-    tr.innerHTML = "<td>" + t.name + "</td>" + cells;
+    var fee = t.est === "—" ? "no title · by design" : t.title + " · " + t.est.replace("~", "");
+    tr.innerHTML = '<td>' + t.name + '<span class="team-fee">' + fee + "</span></td>" + cells;
     mx.appendChild(tr);
   });
 

@@ -507,6 +507,27 @@ input[type="range"] { width: 100%; accent-color: var(--red); }
 .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 @media (max-width: 640px) { .fields { grid-template-columns: 1fr; } }
 
+/* ---------- collapsible folds ---------- */
+details.fold { border: 1px solid var(--line); background: var(--panel); }
+details.fold + details.fold { margin-top: 0.6rem; }
+details.fold summary {
+  cursor: pointer; list-style: none;
+  padding: 0.85rem 1.2rem; font-size: 0.92rem; font-weight: 500; color: var(--ink-soft);
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+details.fold summary::-webkit-details-marker { display: none; }
+details.fold summary::after { content: "+"; color: var(--ink-faint); font-size: 1.1rem; font-weight: 300; transition: transform 0.25s ease; }
+details.fold[open] summary::after { transform: rotate(45deg); }
+details.fold summary:hover { color: var(--ink); background: var(--panel-2); }
+details.fold[open] summary { border-bottom: 1px solid var(--line); color: var(--ink); }
+details.fold .fold-body { padding: 1rem 1.2rem; font-size: 0.9rem; color: var(--ink-soft); font-weight: 300; line-height: 1.7; }
+details.fold .fold-body strong { color: var(--ink); }
+details.fold .fold-body a { color: var(--red-soft); }
+details.fold .fold-body .refs a { color: var(--ink-soft); }
+details.fold .fold-body .refs a:hover { color: var(--red-soft); }
+article.project details.fold { margin-top: 2rem; }
+
 /* ---------- sponsorship atlas ---------- */
 .tlr { display: grid; grid-template-columns: 8.5rem 1fr 6.5rem; gap: 0.8rem; align-items: center; padding: 0.42rem 0; font-size: 0.8rem; }
 .tlr .tll { color: var(--ink-soft); font-weight: 300; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -531,6 +552,12 @@ input[type="range"] { width: 100%; accent-color: var(--red); }
 .mdot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #6a7078; }
 .mdot.hot { background: var(--red); }
 .matrix tr.hl td { background: var(--panel-2); color: var(--ink); }
+.matrix td { font-size: 0.76rem; }
+.matrix td .mc { white-space: nowrap; }
+.matrix td .mc.hot { color: var(--red-soft); font-weight: 600; }
+.matrix td .none { color: var(--ink-faint); opacity: 0.5; }
+.matrix td .team-fee { display: block; font-size: 0.68rem; color: var(--ink-faint); font-weight: 300; margin-top: 0.1rem; white-space: nowrap; }
+.matrix td:first-child { color: var(--ink); font-weight: 500; }
 
 .chips { display: flex; gap: 0.45rem; flex-wrap: wrap; margin: 1rem 0 1.1rem; }
 .chips button {

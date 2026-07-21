@@ -26,7 +26,20 @@
         if (d.querySelector(".dot.off, .dot.half")) d.open = true;
       });
     }
+    var fold = target.closest ? target.closest("details") : null;
+    if (target.tagName === "DETAILS") target.open = true;
+    while (fold) { fold.open = true; fold = fold.parentElement.closest("details"); }
     target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+  });
+
+  /* in-page anchors (citations) that point inside a closed fold: open it first */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var target = document.querySelector(a.getAttribute("href"));
+    if (!target) return;
+    var fold = target.closest("details");
+    while (fold) { fold.open = true; fold = fold.parentElement.closest("details"); }
   });
 
   /* ---- stat count-up ---- */
