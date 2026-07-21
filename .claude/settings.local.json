@@ -28,7 +28,10 @@
       "Bash(python3 -c ' *)",
       "Bash(git commit -q -m 'Compress vertical rhythm site-wide *)",
       "Bash(git commit -q -m 'Company monogram chips on chart rows *)",
-      "Bash(git commit -q -m 'Interactive KPI boxes + per-page references with citations *)"
+      "Bash(git commit -q -m 'Interactive KPI boxes + per-page references with citations *)",
+      "Bash(curl -s https://naisargg.github.io/off-track-playbook/projects/sponsorship-roi.html)",
+      "Bash(curl -s https://naisargg.github.io/off-track-playbook/assets/main.js)",
+      "Bash(git commit -q -m 'Cache-bust asset URLs so browsers pick up fresh CSS/JS on deploy *)"
     ]
   }
 }
