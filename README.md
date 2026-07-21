@@ -1,12 +1,12 @@
 # The Off-Track Playbook
 
-Eight studies in Formula 1 business operations — a capstone portfolio on how an F1
+Nine studies in Formula 1 business operations — a capstone portfolio on how an F1
 team makes money off-track. Built from publicly available information only; all
 financial figures are third-party estimates unless a company disclosed them.
 
 **Live:** https://naisargg.github.io/off-track-playbook/
 
-## The eight studies
+## The nine studies
 
 | # | Study | Function | Status |
 |---|-------|----------|--------|
@@ -18,6 +18,7 @@ financial figures are third-party estimates unless a company disclosed them.
 | 6 | [Grid Sponsorship Atlas](projects/sponsorship-atlas.html) | Commercial Partnerships, grid-wide | Interactive — tenure timeline, category matrix, team selector |
 | 7 | [Know RACE — Ferrari as a Company](projects/know-race.html) | Corporate briefing | FY2024 financials, revenue mix, electrification, interview drill |
 | 8 | [Know Audi — the Team Being Built](projects/know-audi.html) | Corporate briefing | Works-entry structure, three sites, role-to-study mapping, interview drill |
+| 9 | [Revolut × Audi — Year-One Activation Plan](projects/audi-activation-plan.html) | Commercial Partnerships | Proposal — rights inventory, four-quarter calendar, measurement plan |
 
 ## Structure
 
