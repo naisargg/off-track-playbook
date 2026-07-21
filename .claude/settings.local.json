@@ -38,7 +38,8 @@
       "Bash(git commit -q -m 'Atlas matrix: company names + title fees; site-wide text de-crowding *)",
       "Bash(git commit -q -m 'Study 07: Know RACE — Ferrari as a company, not a team *)",
       "Bash(git commit -q -m 'Study 08: Know Audi — the team being built from scratch *)",
-      "Bash(git commit -q -m 'Study 09: Revolut x Audi year-one activation plan — the Audi deliverable *)"
+      "Bash(git commit -q -m 'Study 09: Revolut x Audi year-one activation plan — the Audi deliverable *)",
+      "Bash(git commit -q -m 'Grouped color-coded navigation: Ferrari / Audi / General *)"
     ]
   }
 }

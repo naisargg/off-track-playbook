@@ -13,8 +13,13 @@
   --ink-faint: #5a5f66;
   --line: #26292d;
   --node: #6a7078;
-  --red: #f2c200;      /* brand accent — giallo Modena */
+  --red: #f2c200;      /* brand accent — giallo Modena (Ferrari group) */
   --red-soft: #ffd83d;
+  --frr-dim: #d9b025;
+  --audi: #e8375a;     /* Audi group — from Audi's brand red, lifted for dark */
+  --audi-dim: #c04a5c;
+  --gen: #5aa9e6;      /* General group — cool blue */
+  --gen-dim: #6f9cc0;
   --max: 1180px;
   --pad: clamp(1.2rem, 4vw, 3.5rem);
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -57,6 +62,41 @@ header.site .wrap { flex-wrap: wrap; }
 .topnav a:hover { color: var(--ink); border-color: var(--line); }
 .topnav a.on { color: var(--ink); background: var(--panel-2); border-color: var(--line); }
 .topnav a.on::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--red); margin-right: 0.45rem; vertical-align: 1px; }
+
+/* grouped nav: Ferrari giallo · Audi red · General blue */
+.topnav .tng { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0.1rem 0 0.55rem; }
+.topnav .tng:first-of-type { margin-left: 0.3rem; }
+.topnav a.g-frr { color: var(--frr-dim); }
+.topnav a.g-frr:hover { color: var(--red-soft); border-color: var(--red); }
+.topnav a.g-frr.on { color: var(--ink); border-color: var(--red); }
+.topnav a.g-frr.on::before { background: var(--red); }
+.topnav a.g-audi { color: var(--audi-dim); }
+.topnav a.g-audi:hover { color: var(--audi); border-color: var(--audi); }
+.topnav a.g-audi.on { color: var(--ink); border-color: var(--audi); }
+.topnav a.g-audi.on::before { background: var(--audi); }
+.topnav a.g-gen { color: var(--gen-dim); }
+.topnav a.g-gen:hover { color: var(--gen); border-color: var(--gen); }
+.topnav a.g-gen.on { color: var(--ink); border-color: var(--gen); }
+.topnav a.g-gen.on::before { background: var(--gen); }
+
+/* homepage tile groups */
+.tg-head { display: flex; align-items: center; gap: 0.55rem; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin: 2rem 0 0.8rem; }
+.tg-head:first-of-type { margin-top: 0; }
+.tg-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.tg-head.g-frr .tg-dot { background: var(--red); }
+.tg-head.g-audi .tg-dot { background: var(--audi); }
+.tg-head.g-gen .tg-dot { background: var(--gen); }
+
+.tiles.g-audi .pill { border-color: var(--audi); color: var(--audi); }
+.tiles.g-audi .pill.soft { border-color: var(--line); color: var(--ink-faint); }
+.tiles.g-audi .n2 em { color: var(--audi); }
+.tiles.g-audi .tr.hot .tb i { background: var(--audi); }
+.tiles.g-audi .tile:hover .no { color: var(--audi); }
+.tiles.g-gen .pill { border-color: var(--gen); color: var(--gen); }
+.tiles.g-gen .pill.soft { border-color: var(--line); color: var(--ink-faint); }
+.tiles.g-gen .n2 em { color: var(--gen); }
+.tiles.g-gen .tr.hot .tb i { background: var(--gen); }
+.tiles.g-gen .tile:hover .no { color: var(--gen); }
 
 /* prev/next pager between studies */
 .pager {
