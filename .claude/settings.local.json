@@ -31,7 +31,10 @@
       "Bash(git commit -q -m 'Interactive KPI boxes + per-page references with citations *)",
       "Bash(curl -s https://naisargg.github.io/off-track-playbook/projects/sponsorship-roi.html)",
       "Bash(curl -s https://naisargg.github.io/off-track-playbook/assets/main.js)",
-      "Bash(git commit -q -m 'Cache-bust asset URLs so browsers pick up fresh CSS/JS on deploy *)"
+      "Bash(git commit -q -m 'Cache-bust asset URLs so browsers pick up fresh CSS/JS on deploy *)",
+      "WebFetch(domain:rtrsports.com)",
+      "WebSearch",
+      "Bash(git commit -q -m 'Study 06: Grid Sponsorship Atlas — every team'\\\\''s sponsors compared *)"
     ]
   }
 }
